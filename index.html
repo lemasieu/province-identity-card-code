@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tra cứu mã tỉnh căn cước</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <h1>🔍 Tra cứu mã tỉnh căn cước</h1>
+    <p class="subtitle">Nhập 3 số đầu căn cước hoặc tên tỉnh để tra cứu thông tin sáp nhập</p>
+  </header>
+
+  <main class="container">
+    <!-- Ô tìm kiếm -->
+    <section class="search-section">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Nhập 3 số đầu căn cước hoặc tên tỉnh..."
+          autocomplete="off"
+        >
+        <button id="searchBtn" aria-label="Tìm kiếm">Tìm</button>
+      </div>
+      <p class="hint">Ví dụ: <code>001</code>, <code>Hà Nội</code>, <code>Đà Nẵng</code></p>
+    </section>
+
+    <!-- Kết quả tra cứu -->
+    <section id="resultSection" class="result-section hidden">
+      <div id="resultCard" class="result-card"></div>
+    </section>
+
+    <!-- Bảng toàn bộ -->
+    <section class="table-section">
+      <h2>📋 Bảng tra cứu đầy đủ</h2>
+      <div class="table-wrapper">
+        <table id="provinceTable">
+          <thead>
+            <tr>
+              <th>Mã CCCD</th>
+              <th>Tỉnh cũ</th>
+              <th>Tỉnh mới</th>
+              <th>Mã hành chính</th>
+              <th>Sáp nhập từ</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dữ liệu tham khảo theo Nghị quyết sáp nhập tỉnh 2025. Không lưu trữ dữ liệu người dùng.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
